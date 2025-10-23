@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store - KWXDC</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Pale Blue Background */
+        }
+        /* Meesho-inspired colors */
+        .meesho-pink { background-color: #f43f5e; }
+        .meesho-pink-hover { background-color: #e11d48; }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-10 p-4 bg-white rounded-xl shadow-lg border-b-4 border-fuchsia-500">
+            <h1 class="text-4xl font-extrabold text-gray-800">NINE_SEVEN STORE GALLERY</h1>
+            <p class="text-gray-500 mt-2">Check out our best products and visit our shop directly on Meesho!</p>
+        </header>
+
+        <!-- Product Grid (Responsive) -->
+        <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <!-- Product Card 1: FINAL -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.02] duration-300 cursor-pointer border border-gray-100"> 
+                
+                <img src="https://images.meesho.com/images/products/455797063/jnoka_512.avif?width=512" 
+                     alt="Product 1 Slicer Image" 
+                     class="w-full h-64 object-contain object-center p-2">
+                
+                <div class="p-4">
+                    <!-- PRODUCT NAME -->
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1" id="product1-name">Fabulous Women Sliders Embellished with attractive and comfortable half bellies</h2>
+                    <p class="text-sm text-gray-500">Click to view product.</p>
+                    <!-- PRODUCT PRICE -->
+                    <p class="text-2xl font-bold text-fuchsia-600 mb-3" id="product1-price">₹ 140</p>
+                    
+                    <button class="w-full meesho-pink text-white font-semibold py-2 rounded-lg hover:meesho-pink-hover transition duration-150" 
+                            data-meesho-url="https://www.meesho.com/s/p/7jdb9j?utm_source=s_cc" 
+                            onclick="redirectToMeesho(this.getAttribute('data-meesho-url'))">
+                        View on Meesho
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 2: FINAL -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.02] duration-300 cursor-pointer border border-gray-100"> 
+                
+                <img src="https://images.meesho.com/images/products/467601325/1ggcz_512.avif?width=512" 
+                     alt="Product 2 Slicer Image" 
+                     class="w-full h-64 object-contain object-center p-2">
+                
+                <div class="p-4">
+                    <!-- PRODUCT NAME -->
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1" id="product2-name">Fabulous Women Sliders Embellished with attractive and comfortable half bellies</h2>
+                    <p class="text-sm text-gray-500">Click to view product.</p>
+                    <!-- PRODUCT PRICE -->
+                    <p class="text-2xl font-bold text-fuchsia-600 mb-3" id="product2-price">₹ 138</p>
+                    
+                    <button class="w-full meesho-pink text-white font-semibold py-2 rounded-lg hover:meesho-pink-hover transition duration-150" 
+                            data-meesho-url="https://www.meesho.com/s/p/7qebhp?utm_source=s_cc" 
+                            onclick="redirectToMeesho(this.getAttribute('data-meesho-url'))">
+                        View on Meesho
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 3: FINAL -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.02] duration-300 cursor-pointer border border-gray-100"> 
+                
+                <img src="https://images.meesho.com/images/products/467897140/xsxzq_512.avif?width=512" 
+                     alt="Product 3 Slicer Image" 
+                     class="w-full h-64 object-contain object-center p-2">
+                
+                <div class="p-4">
+                    <!-- PRODUCT NAME -->
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1" id="product3-name">Voguish Women Flats and Fabulous Women flats</h2>
+                    <p class="text-sm text-gray-500">Click to view product.</p>
+                    <!-- PRODUCT PRICE -->
+                    <p class="text-2xl font-bold text-fuchsia-600 mb-3" id="product3-price">₹ 138</p>
+
+                    <button class="w-full meesho-pink text-white font-semibold py-2 rounded-lg hover:meesho-pink-hover transition duration-150" 
+                            data-meesho-url="https://www.meesho.com/s/p/7qknqs?utm_source=s_cc" 
+                            onclick="redirectToMeesho(this.getAttribute('data-meesho-url'))">
+                        View on Meesho
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+        // Global variables for Firebase setup (required by environment)
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+
+        // --- Utility Functions ---
+
+        /**
+         * Redirects the customer directly to the given Meesho URL.
+         * @param {string} meeshoUrl - The full Meesho store URL.
+         */
+        function redirectToMeesho(meeshoUrl) {
+            console.log(`Redirecting to Meesho store: ${meeshoUrl}`);
+            window.location.href = meeshoUrl;
+        }
+    </script>
+</body>
+</html>
