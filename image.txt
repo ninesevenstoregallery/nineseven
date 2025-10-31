@@ -1,0 +1,12 @@
+<header style="padding: 15px; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+    <a href="index.html"> 
+        <img src="C:\Users\ahmed\Downloads\WhatsApp Image 2025-10-28 at 17.23.14_d2a97963.jpg" 
+             alt="Nine Seven Logo" 
+             style="max-width: 150px; height: auto; display: block;">
+    </a>
+    
+    <nav style="margin-left: auto;">
+        <a href="products.html" style="text-decoration: none; color: #333; margin-left: 20px;">Products</a>
+        <a href="contact.html" style="text-decoration: none; color: #333; margin-left: 20px;">Contact</a>
+    </nav>
+</header>
